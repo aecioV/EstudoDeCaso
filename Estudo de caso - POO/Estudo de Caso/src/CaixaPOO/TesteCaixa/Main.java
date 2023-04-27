@@ -9,18 +9,14 @@ public class Main {
     public static void main(String[] args){
 
   
-        Cliente p1 = new Cliente("111", "João");
-        Cliente p2 = new Cliente("222", "Maria");
-        Cliente p3 = new Cliente("333", "José");
-        Cliente p4 = new Cliente("444", "Lucas");
-  
-        
-        Conta c1 = new Conta(333, p1, 433, 1000.0);
-        Conta c2 = new Conta(157, p2, 757, 7000.0);
-        Conta c3 = new Conta(444, p3, 747, 6000.0);
-        Conta c4 = new Conta(555, p4, 737, 800.0);
-        
-        
+        Cliente a1 = new Cliente("001", "Aecio");
+        Cliente b2 = new Cliente("002", "Marcos");
+        Cliente c3 = new Cliente("003", "Osvaldo");
+        Cliente d4 = new Cliente("004", "Evaldinolia");
+        Conta A1 = new Conta(312, a1, 433, 900.0);
+        Conta B2 = new Conta(761, b2, 757, 700.0);
+        Conta C3 = new Conta(331, c3, 747, 1800.0);
+        Conta D4 = new Conta(105, d4, 737, 2100.0);
         CadastroContas cadastro = new CadastroContas(4);
               
           cadastro.adicionaConta(c1);
@@ -28,7 +24,7 @@ public class Main {
           cadastro.adicionaConta(c3);
           cadastro.adicionaConta(c4);
   
-       Terminal bb = new Terminal(cadastro);
+          Terminal bb = new Terminal(cadastro);
         
           bb.iniciaOperacao();
         
