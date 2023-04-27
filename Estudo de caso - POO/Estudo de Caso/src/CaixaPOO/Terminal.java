@@ -32,7 +32,7 @@ case 2: boolean b = this.meuCaixa.efetuaSaque(getInt("Numero da Conta"), (double
                
     if (b) {
 System.out.println("Retire o dinheiro");
-} 
+}
     else {
 System.out.println("Pedido de saque recusado");
 }
