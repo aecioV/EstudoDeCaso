@@ -41,7 +41,7 @@ break;
 case 3: this.meuCaixa.recarrega();
 break;
 
-case 5: System.out.println("Entre com Opcao 1-Depósito em cheque, 2-Depósito em cheque");
+case 5: System.out.println("Entre com Opcao 1-Depósito em cheque, 2-Depósito em dinheiro");
     getInt("opção");
             
 boolean bo = this.meuCaixa.deposito(getInt("Numero da Conta"), getInt("Valor") * 1.0, getInt("Senha"));
