@@ -69,6 +69,8 @@ case 6:
 
        this.meuCaixa.Extratof(getInt("Numero da Conta"), getInt("Senha"));     
             
+            if(Conta == null){
+                System.out.println("erro");
     break;
             
 }
