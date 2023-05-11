@@ -59,11 +59,6 @@ public class Caixa {
         if (conta == null || !conta.creditaValor(valor, "Depósito")) {
             return false;
         }
-        this.saldo += valor;
-
-        if (this.saldo < 500) {
-            this.meuTerminal.setModo(0);
-        }
         return true;
     }
 
@@ -80,14 +75,16 @@ public class Caixa {
         return true;
     }
 
-    public void Extratof(int numeroDaConta, int senha) {
+    public void Extratof(int numeroDaConta) {
 
         Conta conta = bdContas.buscaConta(numeroDaConta);
 
        if (conta != null){
-            System.out.println(conta.getHistoricof());
+            return Extratof;
+           
         }
-        
+        else{
+            return null;
     }
 
 }
