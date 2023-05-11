@@ -71,20 +71,12 @@ public class Caixa {
             int numeroDaConta2, int senha2) {
 
         Conta conta1 = bdContas.buscaConta(numeroDaConta1);
-        if (conta1 == null || !conta1.debitaValor(valor1, s1, "Transferência enviada")) {
+      Conta conta2 = bdContas.buscaConta(numeroDaConta2);
+
+        if (conta1 == null || conta2 == null || !conta2.creditaValor(valor1, "Transferência enviada")) {
             return false;
         }
-        this.saldo -= valor1;
-
-        Conta conta2 = bdContas.buscaConta(numeroDaConta2);
-        if (conta2 == null || !conta2.creditaValor(valor1, "Transferência recebida")) {
-            return false;
-        }
-        this.saldo += valor1;
-
-        if (this.saldo < 500) {
-            this.meuTerminal.setModo(0);
-        }
+        conta1.debitaValor(valor1, s1, "Transferência enviada");
         return true;
     }
 
